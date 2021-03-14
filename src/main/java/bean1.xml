@@ -7,4 +7,27 @@
     <!-- bean definitions here -->
 	<!-- config object user -->
 	<bean id="user" class="com.ruiheng.spring5.User"></bean>
+	
+	
+	<!-- set method inject attributes -->
+	<bean id="book" class="com.ruiheng.spring5.Book">
+		<!-- use property inject attribute
+			 name: attribute name
+			 value: value you want it to be
+		 -->
+		<property name="bname" value="LordofRings"></property>
+		<property name="bauthor" value="Mark"></property>
+	</bean>
+	
+	<!-- constructor with parameters injections -->
+	
+	<bean id="orders" class="com.ruiheng.spring5.Orders">
+		<constructor-arg name="oname" value="PC"></constructor-arg>
+		<constructor-arg name="address" value="RoyalOak"></constructor-arg>
+	</bean>
+	
+	
+	
+	
+	
 </beans>
