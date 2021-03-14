@@ -6,37 +6,37 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-	<!-- config object user -->
-	<bean id="user" class="com.ruiheng.spring5.User"></bean>
-	
-	
-	<!-- set method inject attributes -->
-	<bean id="book" class="com.ruiheng.spring5.Book">
-		<!-- use property inject attribute
-			 name: attribute name
-			 value: value you want it to be -->
-		
-		<property name="bname" value="LordofRings"></property>
-		<property name="bauthor" value="Mark"></property>
-		<!-- set a null -->
-		<!-- <property name="address">
-		<null/>
-		</property> -->
-		<!-- attributes have special symbol -->
-		<property name="address">
-			<value><![CDATA[<<USA>>]]></value>
+	<!-- 集合类型属性注入 -->
+	<bean id="stu" class="com.ruiheng.spring5.collectiontype.Stu">
+		<!-- 数组类型属性注入 -->
+		<property name="courses">
+			<array>
+				<value>Java</value>
+				<value>Mysql</value>
+			</array>
 		</property>
-	</bean> 
-	
-	<!-- constructor with parameters injections -->
-	
-	<bean id="orders" class="com.ruiheng.spring5.Orders">
-		<constructor-arg name="oname" value="PC"></constructor-arg>
-		<constructor-arg name="address" value="RoyalOak"></constructor-arg>
+		
+		<!-- list -->
+		<property name="list">
+			<list>
+					<value>Ruiheng</value>
+					<value>Jinyun</value>		
+			</list>
+		</property>
+		
+		<property name="maps">
+			<map>
+				<entry key="JAVA" value="java"></entry>
+				<entry key="PHP" value="php"></entry>
+			</map>
+		</property>
+		
+		<property name="sets">
+			<set>
+				<value>MySQL</value>
+				<value>Redis</value>
+			</set>
+		</property>
 	</bean>
-	
-	 <!-- p space method -->
-	<!-- <bean id="book" class="com.ruiheng.spring5.Book" p:bname="jiuyang shenGong" p:bauthor="wumingshi">
-	</bean> -->
 	
 </beans>
