@@ -15,7 +15,7 @@ public class MyBean implements FactoryBean<Course>{
 	}
 
 	@Override
-	public Class getObjectType() {
+	public Class<?> getObjectType() {
 		
 		return null;
 	}
