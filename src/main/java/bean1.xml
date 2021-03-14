@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
     xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
@@ -13,11 +14,19 @@
 	<bean id="book" class="com.ruiheng.spring5.Book">
 		<!-- use property inject attribute
 			 name: attribute name
-			 value: value you want it to be
-		 -->
+			 value: value you want it to be -->
+		
 		<property name="bname" value="LordofRings"></property>
 		<property name="bauthor" value="Mark"></property>
-	</bean>
+		<!-- set a null -->
+		<!-- <property name="address">
+		<null/>
+		</property> -->
+		<!-- attributes have special symbol -->
+		<property name="address">
+			<value><![CDATA[<<USA>>]]></value>
+		</property>
+	</bean> 
 	
 	<!-- constructor with parameters injections -->
 	
@@ -26,8 +35,8 @@
 		<constructor-arg name="address" value="RoyalOak"></constructor-arg>
 	</bean>
 	
-	
-	
-	
+	 <!-- p space method -->
+	<!-- <bean id="book" class="com.ruiheng.spring5.Book" p:bname="jiuyang shenGong" p:bauthor="wumingshi">
+	</bean> -->
 	
 </beans>
