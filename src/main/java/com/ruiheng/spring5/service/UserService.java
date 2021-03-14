@@ -14,12 +14,12 @@ public class UserService {
 		//create UserDao attribute, generate set method
 		private UserDao userDao;
 		
-		//setter
+		//setter, use setter to finish the injection
 		public void setUserDao(UserDao userDao) {
 			this.userDao = userDao;
 		}
 
-
+		
 		public void add() {
 			System.out.println("adding service");
 			userDao.update();
