@@ -2,6 +2,7 @@ package com.ruiheng.spring5.service;
 
 import javax.annotation.Resource;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import com.ruiheng.spring5.dao.UserDao;
@@ -23,12 +24,16 @@ public class UserService {
 	 * 
 	 * @Qualifier(value="userDaoImp") private UserDao userDao;
 	 */
-	@Resource  //根据类型注入
+	//@Resource  //根据类型注入
+	@Resource(name="userDaoImp") //根据名称注入
 	private UserDao userDao;
+	
+	@Value(value="abc")
+	private String name;
 	
 	public void add() {
 		System.out.println("service adding....");
+		System.out.println(name);
 		userDao.add();
-		
 	}
 }
