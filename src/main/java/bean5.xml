@@ -5,11 +5,6 @@
     xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	
-	<!-- autowirrrrinnnggg -->
-    <!-- bean definitions here -->
-	<bean id="emp" class="com.ruiheng.spring5.autowire.Emp" autowire="byName">
-		<!-- <property name="dept" ref="dept"></property> -->
-		
-	</bean>
-	<bean id="dept" class="com.ruiheng.spring5.autowire.Dept"></bean>
+	<!-- 创建德鲁伊连接池的对象 -->
+	<bean id></bean>
 </beans>
