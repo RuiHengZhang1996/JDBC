@@ -7,7 +7,7 @@
 
     <!-- bean definitions here -->
 	<!-- 集合类型属性注入 -->
-	<bean id="stu" class="com.ruiheng.spring5.collectiontype.Stu">
+	<bean id="stu" class="com.ruiheng.spring5.collectiontype.Stu" scope="prototype">
 		<!-- 数组类型属性注入 -->
 		<property name="courses">
 			<array>
@@ -48,11 +48,11 @@
 	</bean>
 	
 	
-	<bean id="course1" class="com.ruiheng.spring5.collectiontype.Course">
+	<bean id="course1" class="com.ruiheng.spring5.collectiontype.Course" scope="prototype">
 		<property name="cname" value="123"></property>
 	</bean>
 	
-	<bean id="course2" class="com.ruiheng.spring5.collectiontype.Course">
+	<bean id="course2" class="com.ruiheng.spring5.collectiontype.Course" scope="prototype">
 		<property name="cname" value="Mybatis"></property>
 	</bean>
 </beans>
