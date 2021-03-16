@@ -11,6 +11,7 @@ public class testTest {
 	@Test
 	public void test() {
 		
+		
 		ApplicationContext context = 
 				new ClassPathXmlApplicationContext("bean2.xml");
 		

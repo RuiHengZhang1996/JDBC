@@ -7,14 +7,24 @@ import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 @Component
 //你被强化了！
 @Aspect
+@Order(1)
 public class UserProxy {
 	
-	@Before(value = "execution(* com.ruiheng.spring5.aopannotation.User.add(..))")
+	
+	//切入点抽取
+	@Pointcut(value = "execution(* com.ruiheng.spring5.aopannotation.User.add(..))")
+	public void point() {
+		
+	}
+	
+	@Before(value = "point()")
 	public void before() {
 		//前置通知
 		System.out.println("before...........");
