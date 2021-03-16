@@ -22,7 +22,7 @@ public class testTest {
 		book.setUserId("1");
 		book.setUsername("2");
 		book.setUstatus("3");
-		bookService.addUser(book);
+		bookService.addBook(book);
 	}
 	
 }

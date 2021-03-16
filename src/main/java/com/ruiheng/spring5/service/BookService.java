@@ -14,7 +14,7 @@ public class BookService {
 	@Autowired
 	private BookDao bookDao;
 	
-	public void addUser(Book book) {
+	public void addBook(Book book) {
 		bookDao.add(book);
 	}
 	

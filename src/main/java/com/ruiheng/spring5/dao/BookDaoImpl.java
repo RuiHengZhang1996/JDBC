@@ -16,10 +16,10 @@ public class BookDaoImpl implements BookDao {
 		
 		//创建sql语句
 		String sql = "insert into t_book values(?,?,?)";
-		
-		//调用方法实现
-		int update = jdbcTemplate.update(sql, book.getUserId(), book.getUsername(), book.getUstatus());
-		
+		Object[] args = {book.getUserId(), book.getUsername(), book.getUstatus()};
+ 		//调用方法实现
+		int update = jdbcTemplate.update(sql, args);
+		System.out.println(update);
 	}
 	
 }
