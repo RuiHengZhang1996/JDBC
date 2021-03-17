@@ -2,14 +2,14 @@ package com.ruiheng.spring5.entity;
 
 public class Book {
 	
-	private String userId;
+	private int userId;
 	private String username;
 	private String ustatus;
 	
-	public String getUserId() {
+	public int getUserId() {
 		return userId;
 	}
-	public void setUserId(String userId) {
+	public void setUserId(int userId) {
 		this.userId = userId;
 	}
 	public String getUsername() {

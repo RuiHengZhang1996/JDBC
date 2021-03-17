@@ -12,11 +12,10 @@ public class BookService {
 
 	//注入dao
 	@Autowired
-	private BookDao bookDao;
-	
-	public void addBook(Book book) {
-		bookDao.add(book);
-	}
-	
+    private BookDao bookDao;
+
+    public void addBook(Book book){
+        bookDao.add(book);
+    }
 	
 }

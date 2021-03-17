@@ -7,5 +7,5 @@ import com.ruiheng.spring5.entity.Book;
 
 @Repository
 public interface BookDao {
-	public void add(Book book);
+	void add(Book book);
 }

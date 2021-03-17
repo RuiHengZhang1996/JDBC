@@ -15,11 +15,9 @@ public class BookDaoImpl implements BookDao {
 	public void add(Book book) {
 		
 		//创建sql语句
-		String sql = "insert into t_book values(?,?,?)";
-		Object[] args = {book.getUserId(), book.getUsername(), book.getUstatus()};
- 		//调用方法实现
-		int update = jdbcTemplate.update(sql, args);
-		System.out.println(update);
+		Object[] args = {book.getUserId(),book.getUsername(),book.getUstatus()};
+        int update = jdbcTemplate.update("insert into t_user values (?,?,?)", args);
+        System.out.println("update successful!" + update);
 	}
 	
 }
